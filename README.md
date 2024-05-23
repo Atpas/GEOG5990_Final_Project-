@@ -1,4 +1,4 @@
-# GEOG5995_Final_Project-
+# GEOG5990_Final_Project-
 Yuting Liu 201775283
 
 Do neighbourhoods with high numbers of unhealthy people in Leeds have fewer resources to live in?
