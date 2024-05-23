@@ -28,4 +28,21 @@ After that the two datasets need to be matched using the ‘. merge' method and 
 
 For the selection of non-spatial visualisation charts, scatter plots were selected and paired with regression lines and confidence intervals. Scatter plots are used to show the relationship between two variables, enabling the observation of correlations and trends between two quantities. Whereas the regression line shows more of a trend between the variables, the confidence interval shows the range of uncertainty in the prediction. As for the choice of colours, I chose a combination of blue, orange, and green. According to Lee et al. (2020), these colours belong to complementary colour pairs, a combination that is easy to distinguish for colour blind people.
 
-After that import the geojson file, align it with the health data, remove mismatched rows, and check for duplicate rows. Then merge it with the previous merged dataset continue to merge it into the new dataset and then keep only the useful columns. In terms of selecting the data, besides health, I chose deprivation indices for barriers to employment, education, and housing services, all variables that are clearly related to quality of life. The next step was to decide how many clusters needed to be created, this can be done by using the Elbow method and tuning the number of iterations to decide the number of clusters (Syakur et al., 2018). 
+After that import the geojson file, align it with the health data, remove mismatched rows, and check for duplicate rows. Then merge it with the previous merged dataset continue to merge it into the new dataset and then keep only the useful columns. In terms of selecting the data, besides health, I chose deprivation indices for barriers to employment, education, and housing services, all variables that are clearly related to quality of life. The next step was to decide how many clusters needed to be created, this can be done by using the Elbow method and tuning the number of iterations to decide the number of clusters (Syakur et al., 2018). After that the clusters were randomly placed and iterated to the result, then looking at the median of the data in each cluster and naming them. In the spatial visualisation, colour-blind friendly colours were still used and a hover component was set up so that the cursor placed on each OA would see the data for that zone, and be able to place boxes on the zones when clicked. 
+
+Result
+-
+Based on the regression line there is a correlation between the variables. As the IMD ranking decreases (representing a decrease in deprivation), the number of unhealthy conditions is decreasing, and there are higher percentages of Badhealth in areas with lower IMD rankings, showing that unhealthy conditions are more serious in areas with higher levels of deprivation. Whilst it can be seen from the cluster maps that unhealthy neighbourhoods are concentrated in Leeds city centre; suburban areas have more healthy neighbourhoods and a higher quality of life for their residents.
+
+This project focussed on the relationship between health and deprivation and drew out which areas should focus more on healthcare. Future research could also group the data into IMD rankings, compare differences in health status between groups with different scales of deprivation, and analyse the correlation of health to different areas of deprivation, to find solutions. This will help advance health equity efforts and improve public health across the city, thereby impacting the quality of life for residents.
+
+
+References
+-
+Augusto, G. F., Fronteira, I., Hernandez-Quevedo, C. 2017. Portugal: health system review. Health Syst Transit, 19(2), 1-184.
+
+Chrisman, M., Nothwehr, F., Yang, G. and Oleson, J. 2015. Environmental Influences on Physical Activity in Rural Midwestern Adults. Health promotion practice. 16(1), pp.142–148.
+
+Lee, H., Lee, E. and Choi, G. 2020. Wayfinding Signage for People with Color Blindness. Journal of interior design. 45(2), pp.35–54.
+
+Syakur, M.A., Khotimah, B.K., Rochman, E.M.S. and Satoto, B.D. 2018. Integration K-Means Clustering Method and Elbow Method For Identification of The Best Customer Profile Cluster. IOP conference series. 336.
