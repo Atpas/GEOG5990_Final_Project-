@@ -2,13 +2,16 @@
 Yuting Liu 201775283
 
 Do neighbourhoods with high numbers of unhealthy people in Leeds have fewer resources to live in?
+==
 
 The background of the project: 
+-
 Health is now a global issue, and countries are finding ways to actively address it. Data studies have found significant differences in health outcomes across communities. A variety of factors influence health disparities, including socioeconomic status, access to health care, educational opportunities and living conditions. According to Chrisman et al. (2015), some communities have lower intensity of physical activity due to fewer activity facilities; while some communities have lower average incomes, which may lead to residents not being able to afford healthcare (Augusto et al., 2017). These may represent a relationship between health and quality of life.
 
 The aim of this project is to explore the relationship between health status and the ability to gain resources for living (LSOA) in different neighbourhoods within Leeds. By using 2011 Census health data and 2015 Index of Multiple Deprivation (IMD) data to define the correlation between poorer health neighbourhoods and deprivation indices, and to make clusters of LSOA areas within the range, to determine what features the groups of clusters have, to provide informational support for decision-making and resource allocation to solve the needs of the most vulnerable populations in the city of Leeds.
 
 Data in the GitHub repository:
+-
 Health and provision of unpaid care data from the 2011 Census. The data covers the LSOA (Lower Layer Super Output Areas) wards in the city of Leeds and is taken from the 2011 Census conducted on 27 March 2011 in the UK. The data resource is at Nomis under the address https://www.nomisweb.co.uk/default.asp. The dataset contains the percentage of people with each health condition included in the LSOA in Leeds, which includes a general health classification, a restriction of daily activities classification and a need for care classification, for the purposes of this project only the general health classification is required.
 
 The second dataset is the 2015 Index of Multiple Deprivation (IMD) for England.
@@ -18,7 +21,8 @@ The third data is Geojson data from Leeds LSOA. This includes the UK National Gr
 
 Although the Index of Deprivation data is from 2015 and is some time different from the 2011 Census data. it is still reasonable to use both datasets for analysis. Firstly, because of the slow change in socio-economic factors, some socio-economic factors may be slow to change over a relatively long period of time, such as levels of deprivation, unemployment, and levels of education. Moreover, deprivation indexes are usually more recent than census data because deprivation indexes will rely on data from government reports and other sources which may not be available until a later point in time, so the timeliness of the data will be affected. Therefore, it is still useful to compare census data from 2011 with deprivation index data from 2015.
 
-Visualisation options and code aims
+Visualisation options and code aims:
+-
 After importing the required packages first, the data processing operations are started. For health data, what needs to be done is to keep only the useful data columns such as general health status and LSOA codes and names. The variable to be studied in this project is 'unhealthy group', so the two columns 'Bad health' and 'Very bad health' need to be added together to get a new column 'bad health %'. After which the null values are checked and deleted. For IMD data, the data needs to be filtered ('Local Authority District name'] == 'Leeds') by keeping only the Leeds data. And rename the column names (columns= {'LSOA code': 'lsoacd') for the ease with which the two datasets can be joined afterwards. 
 After that the two datasets need to be matched using the ‘. merge' method and the public variable 'lsoacd'. And the merged dataset can be used to generate non-spatial visualisation charts.
 
